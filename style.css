@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+li,
+p {
+    cursor: default;
+}
+
+a:hover {
+    color: rgb(70, 148, 255);
+    text-decoration: line-through;
+}
+
+html {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+body,
+main {
+    height: 100%;
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside {
+    width: 20vh;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
+
+#section_name {
+    display: flex;
+    width: 30%;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#photoCouv {
+    background: url('images/Lea.png') no-repeat center;
+    background-size: cover;
+    width: 70%;
+}
+
+#section_infos {
+    width: 70%;
+    justify-content: space-around;
+}
+
+h1,
+h2 {
+    font-size: 800%;
+    display: block;
+    transform: rotate(180deg);
+    padding-top: 200px;
+    letter-spacing: 20px;
+    cursor: default;
+}
+
+h1 {
+    padding-right: 50px;
+}
+
+h3 {
+    width: 50%;
+    text-align: center;
+    font-size: 300%;
+    cursor: default;
+}
+
+p {
+    width: 100%;
+}
+
+#main_row,
+#article_infos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#article_infos {
+    justify-content: space-between;
+    height: 20%;
+}
+
+#main_row {
+    height: 70%;
+    justify-content: space-between;
+}
+
+#section_infos {
+    display: flex;
+    font-size: 150%;
+}
+
+div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+/* Media Queries */
+
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    /* CSS */
+    aside {
+        width: 10vh;
+    }
+    h1,
+    h2 {
+        font-size: 500%;
+    }
+    h3 {
+        font-size: 200%;
+    }
+    #section_infos {
+        font-size: 100%;
+    }
+}
+
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* CSS */
+    aside {
+        width: 10vh;
+    }
+    h1,
+    h2 {
+        padding-top: 100px;
+        font-size: 500%;
+    }
+    h3 {
+        font-size: 200%;
+    }
+    #section_infos {
+        font-size: 100%;
+    }
+}
+
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    aside {
+        width: 10vw;
+    }
+    h1,
+    h2 {
+        padding-right: 0;
+        padding-top: 100px;
+        font-size: 300%;
+    }
+    h3 {
+        padding-top: 50px;
+        font-size: 200%;
+    }
+    #section_infos {
+        font-size: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 50px;
+        padding-top: 50px;
+    }
+    .hide {
+        display: none;
+    }
+}
+
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    h1,
+    h2 {
+        padding-right: 10px;
+        padding-top: 100px;
+        font-size: 150%;
+    }
+    h3 {
+        font-size: 100%;
+        height: 50%;
+        width: 100%;
+    }
+    h1 {
+        padding: 0px;
+    }
+    /* CSS */
+    /* aside {
+        width: 3vw;
+    } */
+    #section_infos,
+    #section_infos div {
+        font-size: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+    .hide {
+        display: none;
+    }
+}
