@@ -1,38 +1,34 @@
+/*GENERAL*/
 * {
     padding: 0;
     margin: 0;
-    /* border: 1px solid black; */
+    /*border: 1px solid black;*/
     box-sizing: border-box;
     font-family: 'Public Sans', sans-serif;
     font-weight: bold;
     list-style-type: none;
-}
-
-a {
-    text-decoration: none;
     color: black;
-    transition: 0.5s;
 }
 
-li,
-p {
+/*Infos qui apparaissent sur format tel seulement*/
+#show {
+    display: none;
+}
+
+main, #main_row, aside, aside span, #article_infos, #section_name, #section_infos, #section_infos div {
+    display: flex;
+}
+
+#main_row, #article_infos, p {
+    width: 100%;
+}
+
+li, p, h1, h2, h3 {
     cursor: default;
 }
 
-a:hover {
-    color: rgb(70, 148, 255);
-    text-decoration: line-through;
-}
-
-html {
+html, body, main {
     min-height: 100vh;
-    width: 100vw;
-}
-
-body,
-main {
-    height: 100%;
-    height: 100vh;
     width: 100%;
 }
 
@@ -41,17 +37,37 @@ main {
     justify-content: space-between;
 }
 
-aside {
-    width: 20vh;
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
+
+/*LIENS*/
+a {
+    text-decoration: none;
+    transition: 0.5s;
 }
 
-#section_name {
-    display: flex;
+a:hover {
+    color: rgb(70, 148, 255);
+    text-decoration: line-through;
+}
+
+
+/*ARTICLE MAIN_ROW*/
+#main_row {
+    height: 70vh;
+}
+
+aside {
     width: 30%;
-    flex-direction: column-reverse;
-    align-items: center;
+    writing-mode: sideways-lr;
+    -webkit-writing-mode: sideways-lr;
+    text-orientation: mixed;
+    font-size: 10vh;
+    letter-spacing: 0.2em;
+}
+aside span {
+    flex-direction: column;
+    text-align: left;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
 }
 
 #photoCouv {
@@ -60,74 +76,94 @@ aside {
     width: 70%;
 }
 
+/*ARTICLE_INFOS*/
+#article_infos {
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-bottom: 2%;
+}
+
+#section_name {
+    width: 30%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+h3 {
+    width: 50%;
+}
+
 #section_infos {
     width: 70%;
     justify-content: space-around;
 }
 
-h1,
-h2 {
-    font-size: 800%;
-    display: block;
-    transform: rotate(180deg);
-    padding-top: 200px;
-    letter-spacing: 20px;
-    cursor: default;
-}
-
-h1 {
-    padding-right: 50px;
-}
-
-h3 {
-    width: 50%;
-    text-align: center;
-    font-size: 300%;
-    cursor: default;
-}
-
-p {
-    width: 100%;
-}
-
-#main_row,
-#article_infos {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-#article_infos {
-    justify-content: space-between;
-    height: 20%;
-}
-
-#main_row {
-    height: 70%;
-    justify-content: space-between;
-}
-
-#section_infos {
-    display: flex;
-    font-size: 150%;
-}
-
-div {
-    display: flex;
+#section_infos div {
     flex-direction: column-reverse;
 }
 
 
-/* Media Queries */
+/*MEDIA QUERIES*/
+
+/*Tablet*/
+@media screen and (max-width: 1024px) {
+    aside, #photoCouv {
+        width: 50%;
+        font-size: 7vh;
+    }
+    #section_name {
+        width: 20%;
+    }
+    #section_infos {
+        width: 80%;
+    }
+}
+
+/*Phone*/
+@media screen and (max-width: 640px) {
+    aside, #photoCouv {
+        font-size: 7vh;
+    }
+    #show {
+        display: block;
+    }
+
+    .hide {
+        display: none !important;
+    }
+    #section_name {
+        width: 50%;
+        justify-content: space-evenly;
+    }
+    h3, #show {
+        width: 100%;
+        text-align: left;
+    }
+
+    #section_infos {
+    flex-direction: column;
+        text-align: right;
+        justify-content: space-evenly;
+    }
+
+    #article_infos {
+        padding: 3%;
+    }
+}
 
 
-/* 
+/*
+
+!* Media Queries *!
+
+!*
     ##Device = Laptops, Desktops
     ##Screen = B/w 1025px to 1280px
-  */
+  *!
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    /* CSS */
+    !* CSS *!
     aside {
         width: 10vh;
     }
@@ -144,13 +180,13 @@ div {
 }
 
 
-/* 
+!*
     ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px
-  */
+  *!
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    /* CSS */
+    !* CSS *!
     aside {
         width: 10vh;
     }
@@ -168,10 +204,10 @@ div {
 }
 
 
-/* 
+!*
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px
-  */
+  *!
 
 @media (min-width: 481px) and (max-width: 767px) {
     aside {
@@ -201,10 +237,10 @@ div {
 }
 
 
-/* 
+!*
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
-  */
+  *!
 
 @media (min-width: 320px) and (max-width: 480px) {
     h1,
@@ -221,10 +257,10 @@ div {
     h1 {
         padding: 0px;
     }
-    /* CSS */
-    /* aside {
+    !* CSS *!
+    !* aside {
         width: 3vw;
-    } */
+    } *!
     #section_infos,
     #section_infos div {
         font-size: 100%;
@@ -237,4 +273,4 @@ div {
     .hide {
         display: none;
     }
-}
+}*/
