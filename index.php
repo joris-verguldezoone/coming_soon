@@ -7,10 +7,11 @@
     <meta name="description" content="Cheffe de projet événementielle basée à Marseille. Forte d'une expérience en gestion d'événements physiques & digitaux,
      je vous propose mes services en vous accompagnant dans la réalisation et la réussite de vos évents.">
     <title>Zill'Event by Léa Zillweger | Coming Soon</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@900&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='style.css'>
 </head>
