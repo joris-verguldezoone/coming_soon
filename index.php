@@ -31,7 +31,7 @@
 
     <article id='article_infos'>
         <section id="section_name">
-            <h3>Zill'Event <br>by Léa Zillweger</h3>
+            <h3>Zill'Event by Léa Zillweger</h3>
             <div id="show">
                 <a href="mailto:lea@zill-event.com">lea@zill-event.com</a>
                 <p>07 69 66 02 49</p>

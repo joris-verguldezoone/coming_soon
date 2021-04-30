@@ -94,7 +94,8 @@ aside span {
 }
 
 h3 {
-    width: 50%;
+    width: 80%;
+    padding:7%;
 }
 
 #section_infos {
@@ -129,6 +130,11 @@ h3 {
     #section_infos {
         width: 80%;
     }
+    h3 {
+        width: 80%;
+        /* padding:0%; */
+    }
+    
 }
 
 /*Phone*/
@@ -155,6 +161,8 @@ h3 {
     h3, #show {
         width: 100%;
         text-align: left;
+        padding:0%;
+
     }
 
     #section_infos {
